@@ -39,7 +39,7 @@ describe("Task Contract", function() {
         });
         
         describe("Add Task", function() {
-            if("Should emit AddTask event", async function() {
+            it("Should emit AddTask event", async function() {
                 let task = {
                     'taskText': 'New task',
                     'isDeleted': false,
