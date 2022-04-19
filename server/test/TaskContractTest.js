@@ -22,7 +22,7 @@ describe("Task Contract", function() {
                 'isDeleted': false
             };
 
-            await taskContract.addTask(taskText, task.isDeleted);
+            await taskContract.addTask(task.taskText, task.isDeleted);
             totalTasks.push(task);
         }
     });
@@ -52,7 +52,7 @@ describe("Task Contract", function() {
         describe("Get All tasks", function() {
             it("Should return the correct number of total tasks", async function() {
                 const taskFromChain = await taskContract.getMyTasks();
-                expect(tasksFromChain.length).to.equal(NUM_TOTAL_TASKS);
+                expect(taskFromChain.length).to.equal(NUM_TOTAL_TASKS);
             })
         })
 
