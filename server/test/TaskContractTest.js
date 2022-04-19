@@ -22,7 +22,7 @@ describe("Task Contract", function() {
                 'isDeleted': false
             };
 
-            await taskcontract.addTask(taskText, task.isDeleted);
+            await taskContract.addTask(taskText, task.isDeleted);
             totalTasks.push(task);
         }
     });
