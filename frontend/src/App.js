@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import {TextField, Button} from "@mui/material";
+import Task from './Task';
 import './App.css';
 
+import {TaskContractAddress} from './config.js';
+import {ethers} from 'ethers';
+import TaskAbi from './utils/TaskContract.json';
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [tasks, setTasks] = useState([]);
+  const [input, setInput] = useState('');
+  const [currentAccount, setCurrentAccount] = useState('');
+  const [correctNetwork, setCurrentNetwork] = useState(false);
+
+  const connectWallet = async
 }
 
 export default App;
